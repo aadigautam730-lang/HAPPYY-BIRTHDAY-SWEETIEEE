@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy 16th Birthday REHUUU 🎂</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Pacifico&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{min-height:100vh;overflow:hidden;overflow-y: auto;font-family:"Cinzel",serif;background:radial-gradient(circle at 20% 20%,#472080 0%,transparent 30%),radial-gradient(circle at 80% 80%,#8b236b 0%,transparent 30%),linear-gradient(135deg,#090014,#16002e,#250044);color:white}
+.stars{position:fixed;inset:0;pointer-events:none}
+.star{position:absolute;width:3px;height:3px;background:white;border-radius:50%;box-shadow:0 0 8px white;animation:twinkle 2s infinite alternate}
+@keyframes twinkle{from{opacity:.25;transform:scale(.7)}to{opacity:1;transform:scale(1.3)}}
+.shooting-star{position:fixed;width:120px;height:2px;background:linear-gradient(90deg,transparent,white);transform:rotate(-35deg);animation:shoot 4s linear infinite;opacity:0}
+.shooting-star:nth-child(1){top:15%;left:10%;animation-delay:1s}.shooting-star:nth-child(2){top:35%;left:70%;animation-delay:3s}
+@keyframes shoot{0%{transform:translate(0,0) rotate(-35deg);opacity:0}10%{opacity:1}30%{transform:translate(400px,250px) rotate(-35deg);opacity:0}100%{opacity:0}}
+.container{position:relative;z-index:5;min-height:100vh;display:flex;justify-content:center;align-items:center;padding:20px}
+.card{width:min(90vw,650px);padding:45px 35px;text-align:center;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:30px;backdrop-filter:blur(18px);box-shadow:0 0 50px rgba(170,70,255,.25),inset 0 0 30px rgba(255,255,255,.03);animation:appear 1.3s ease}
+@keyframes appear{from{opacity:0;transform:translateY(30px) scale(.95)}to{opacity:1;transform:translateY(0) scale(1)}}
+.small{color:#d9b8ff;font-size:15px;letter-spacing:4px;text-transform:uppercase;margin-bottom:15px}
+h1{font-family:"Pacifico",cursive;font-weight:400;letter-spacing:4px;word-spacing:10px;line-height:1.25;padding:0 10px;font-size:clamp(42px,9vw,78px);line-height:1;margin-bottom:15px;background:linear-gradient(90deg,#fff,#e6b8ff,#ffb7ed,#fff);background-size:250%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:gradient 4s ease infinite}
+@keyframes gradient{0%{background-position:0%}50%{background-position:100%}100%{background-position:0%}}
+.name-line{display:inline-block;margin-top:5px}.age{font-size:27px;font-weight:bold;color:#f1c7ff;margin-bottom:25px}
+.message{color:#eee;font-size:17px;line-height:1.7;max-width:500px;margin:auto}
+.cake{font-size:85px;margin:20px 0;animation:cakeFloat 3s ease-in-out infinite;filter:drop-shadow(0 0 18px rgba(255,170,255,.5))}
+@keyframes cakeFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+button{margin-top:30px;border:none;padding:14px 28px;border-radius:999px;color:white;background:linear-gradient(135deg,#9b4dff,#e04fa7);font-size:16px;font-weight:bold;cursor:pointer;box-shadow:0 0 25px rgba(190,70,255,.4);transition:.25s}
+button:hover{transform:translateY(-3px) scale(1.04);box-shadow:0 0 35px rgba(230,100,255,.65)}
+button:active{transform:scale(.96)}
+#secret{max-height:0;overflow:hidden;opacity:0;transition:.8s ease;margin-top:0}
+#secret.show{max-height:300px;opacity:1;margin-top:25px}
+.secret-text{padding:20px;border-radius:18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:#f5ddff;line-height:1.6}
+.signature{margin-top:22px;color:#cba4ff;font-size:14px}
+.emoji{position:fixed;font-size:25px;pointer-events:none;animation:floatUp 6s linear forwards;z-index:10}
+@keyframes floatUp{from{transform:translateY(0) rotate(0deg);opacity:1}to{transform:translateY(-100vh) rotate(360deg);opacity:0}}
+@media(max-width:600px){.card{padding:35px 22px}.message{font-size:15px}.cake{font-size:65px}h1{letter-spacing:2px;word-spacing:5px;line-height:1.3;padding:0}.name-line{display:inline-block;margin-top:4px}}
+</style>
+</head>
+<body>
+<div class="stars" id="stars"></div>
+<div class="shooting-star"></div><div class="shooting-star"></div>
+<div class="container">
+<div class="card">
+<div class="small">A little birthday surprise ✨</div>
+<h1><span class="birthday-line">Happy Birthday</span><br><span class="name-line">REHUUU!</span></h1>
+<div class="age">🎉 Level 16 Unlocked 🎉</div>
+<div class="cake">🎂</div>
+<p class="message">HAPPYY 16TH BIRTHDAYY REHUUU! 💜<br><br>AGAINNN HAPPYY BIRTHDAYY I JUST WANTED TOOO TELL YOUU THANKSS FORRRR HEALINGG MEEE HEHHEHEHE<br><br>YOUREEE THEE BESTTTTTT EHEHYAEYYAEYEYAEYEYYEYEAYEYAE</p>
+<button onclick="revealMessage()">CLICCKKK DISS BUTTONN TWINNN</button>
+<div id="secret"><div class="secret-text">Here's to 16 🎈<br><br>HAPPYYY BRITHHHDAAYYYYYYY YOUUREE THEE BESTT PERSONN IVE MET THISS YEARRRRR THANKKKK YOUUUUUUUUUUU I HOPE YOU HAVE THE BESTTTESTTT DAYY TODAYYYY CUTIEEEE REHUUU! 🥳💜</div></div>
+<div class="signature">MADEEE BYY MYY OFCC ASHHERRR ✨ </div>
+</div></div>
+<script>
+const stars=document.getElementById("stars");
+for(let i=0;i<140;i++){const star=document.createElement("div");star.className="star";star.style.left=Math.random()*100+"%";star.style.top=Math.random()*100+"%";const size=Math.random()*3+1;star.style.width=size+"px";star.style.height=size+"px";star.style.animationDelay=Math.random()*3+"s";stars.appendChild(star)}
+function revealMessage(){const secret=document.getElementById("secret");secret.classList.toggle("show");if(secret.classList.contains("show"))celebration()}
+function celebration(){const emojis=["🎉","🎂","✨","💜","🎈","🥳","⭐","🌟"];for(let i=0;i<35;i++){setTimeout(()=>{const emoji=document.createElement("div");emoji.className="emoji";emoji.innerText=emojis[Math.floor(Math.random()*emojis.length)];emoji.style.left=Math.random()*100+"vw";emoji.style.top=70+Math.random()*30+"vh";emoji.style.fontSize=18+Math.random()*25+"px";emoji.style.animationDuration=4+Math.random()*4+"s";document.body.appendChild(emoji);setTimeout(()=>emoji.remove(),8000)},i*70)}}
+</script>
+</body>
+</html>
